@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:onClick="CountryList"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <LinearLayout
+                android:id="@+id/SearchBarHomeFragmentLL2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="#F32E2E">
+
+                <com.example.covid_19.Typewriter
+                    android:id="@+id/SearchBarSearchTextTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/search_background"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/maven_pro"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dp"
+                    android:textColor="#ADADAD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:scaleType="fitXY"
+                                android:src="@drawable/covid19img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:layout_marginLeft="60dp"
+                                android:layout_gravity="center"
+                                android:textSize="22dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/maven_pro"
+                                android:textColor="#ffffff"
+                                android:text="Bangladesh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:id="@+id/TitleTV"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/maven_pro"
+                            android:textColor="#000000"
+                            android:text="Bangladesh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#505050"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:paddingLeft="10dp"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:textSize="22dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/maven_pro"
+                                    android:textColor="#ffffff"
+                                    android:text="Date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:layout_width="0dp"
+                                android:paddingRight="10dp"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:textSize="22dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/maven_pro"
+                                    android:textColor="#ffffff"
+                                    android:text="Affected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:background="#505050"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/ListRv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>
